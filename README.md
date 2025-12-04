@@ -40,16 +40,19 @@ a. Struktur awal Flask:
 from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
 app.secret_key = "secret123"
+
 b. Fungsi login dasar:
 if username == "admin" and password == "123":
     session["user"] = username
     return redirect("/home")
+    
 c. Template HTML dasar (login.html):
 <form method="POST">
     <input type="text" name="username" placeholder="Username">
     <input type="password" name="password" placeholder="Password">
     <button type="submit">Login</button>
 </form>
+
 d. Saran layout folder & style CSS
 
 Semua kode kemudian diadaptasi, dirapikan, dan disesuaikan dengan kebutuhan tugas.
