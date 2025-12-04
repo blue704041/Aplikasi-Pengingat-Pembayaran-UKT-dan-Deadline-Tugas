@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="login-bg">
+
+<div class="login-card">
+    <h1>Selamat Datang!</h1>
+    <h3>Login</h3>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" class="input-box">
+        <input type="password" name="password" placeholder="Password" class="input-box">
+
+        <button type="submit" class="btn">next</button>
+    </form>
+
+    <p class="tagline">Aplikasi Pengingat Pembayaran UKT dan Deadline Tugas</p>
+</div>
+
+</body>
+</html>

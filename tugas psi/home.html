@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="home-bg">
+
+<h2 class="greet">Selamat Pagi, <span>{{ username }}</span></h2>
+
+<!-- ========== PEMBAYARAN ========== -->
+<h3 class="section-title">Pembayaran Anda</h3>
+
+{% for p in payments %}
+<div class="card">
+    <div class="date">{{ p.date }}</div>
+    <div class="title">{{ p.title }}</div>
+
+    <div class="actions">
+        <a href="/delete_payment/{{ p.id }}">🗑</a>
+    </div>
+</div>
+{% endfor %}
+
+<form class="add-form" method="POST" action="/add_payment">
+    <input type="date" name="date">
+    <input type="text" name="title" placeholder="Nama pembayaran">
+    <button>Tambah</button>
+</form>
+
+<!-- ========== TUGAS ANDA ========== -->
+<h3 class="section-title">Tugas Anda</h3>
+
+{% for t in tasks %}
+<div class="card">
+    <div class="date">{{ t.date }}</div>
+    <div class="title">{{ t.title }}</div>
+
+    <div class="actions">
+        <a href="/delete_task/{{ t.id }}">🗑</a>
+    </div>
+</div>
+{% endfor %}
+
+<form class="add-form" method="POST" action="/add_task">
+    <input type="date" name="date">
+    <input type="text" name="title" placeholder="Nama tugas">
+    <button>Tambah</button>
+</form>
+
+</body>
+</html>
