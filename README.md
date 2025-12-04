@@ -34,7 +34,7 @@ Password dummy: 123
 
 Beberapa bagian dibuat dengan bantuan AI untuk mempercepat pekerjaan, namun tetap dipahami dan disesuaikan:
 
-✔ Contoh bagian yang dibantu AI:
+Contoh bagian yang dibantu AI:
 a. Struktur awal Flask:
 from flask import Flask, render_template, request, redirect, session
 
